@@ -1,0 +1,22 @@
+@import url("https://fonts.googleapis.com/css?family=Lato:400,700&display=swap");
+body {
+  font-family: "Lato", Arial, Helvetica, sans-serif;
+}
+.jumbotron-fluid {
+  background-image: url("https://source.unsplash.com/hAh4Unn50gk");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  min-height: 500px;
+}
+.shop {
+  background: rgba(255, 255, 255, 0.75);
+  padding: 2rem 1rem;
+  text-transform: uppercase;
+  max-width: 40%;
+  margin: 5% auto;
+}
+.btn-sm:hover {
+  background: var(--danger) !important;
+  border: 1px solid var(--danger);
+}
