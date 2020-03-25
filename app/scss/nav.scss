@@ -1,0 +1,19 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Baloo+2&display=swap");
+nav {
+  border-bottom: 1px solid black;
+  background: $mid-light;
+  color: $light;
+  font-family: $font-default;
+  .container {
+    @include flex();
+    justify-content: space-between;
+    width: 70%;
+    margin: 0 auto;
+    padding: 1rem 0;
+    .logo {
+      font-size: 3rem;
+      text-align: center;
+    }
+  }
+}
