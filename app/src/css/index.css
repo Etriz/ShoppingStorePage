@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Baloo+2&display=swap");
 html,
 body,
 div,
@@ -124,3 +126,67 @@ table {
 
 * {
   box-sizing: border-box; }
+
+html {
+  font-size: 62.5%; }
+
+body {
+  font-size: 16px; }
+
+nav {
+  border-bottom: 1px solid black;
+  background: #8a8e8d;
+  color: #f6f7f5;
+  font-family: "Baloo 2", sans-serif; }
+  nav .container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 70%;
+    margin: 0 auto;
+    padding: 1rem 0; }
+    nav .container .logo {
+      font-size: 3rem;
+      text-align: center; }
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 70%;
+  margin: 0 auto; }
+
+.jumbo {
+  background-image: url("https://source.unsplash.com/hAh4Unn50gk");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  max-height: 500px;
+  font-family: "Baloo 2", sans-serif;
+  text-align: center;
+  padding: 3rem; }
+  .jumbo .shop {
+    display: flex;
+    flex-wrap: wrap;
+    border-radius: 5px;
+    background: rgba(255, 255, 255, 0.75);
+    text-transform: uppercase;
+    text-align: center;
+    max-width: 60%;
+    padding: 2rem 1rem;
+    margin: 5% auto; }
+    .jumbo .shop h1 {
+      font-size: 4rem;
+      width: 100%; }
+    .jumbo .shop .btn {
+      margin: 2rem auto 0;
+      outline: none;
+      border: none;
+      border-radius: 5px;
+      background: #f44336;
+      color: #f6f7f5;
+      padding: 1rem;
+      text-align: center;
+      cursor: pointer; }
+      .jumbo .shop .btn:hover {
+        background: #ba160a; }
