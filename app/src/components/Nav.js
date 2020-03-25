@@ -1,4 +1,6 @@
 import React from "react";
+import Menu from "../components/Menu";
+import Cart from "../components/Cart";
 
 export default function Header() {
   return (
