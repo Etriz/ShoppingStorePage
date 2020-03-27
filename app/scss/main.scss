@@ -2,7 +2,8 @@ main {
   padding: 3rem 0;
   .card {
     // border: 1px solid black;
-    max-width: 350px;
+    // width: 30%;
+    margin: 1rem;
     background: $light;
     border-radius: $radius-default;
     // border: 1px solid black;
@@ -27,5 +28,18 @@ main {
     justify-content: space-between;
     margin-bottom: 1rem;
     padding: 0 1rem;
+    .viewBtn {
+      @include btn();
+    }
+    .cartBtn {
+      @include btn();
+      border: 1px solid $shadow;
+      border-radius: 0 $radius-default $radius-default 0;
+      background: $light;
+      color: $dark;
+    }
+    .price {
+      padding: 1rem 0;
+    }
   }
 }
