@@ -2,44 +2,45 @@ main {
   padding: 3rem 0;
   .card {
     // border: 1px solid black;
-    // width: 30%;
+    min-width: 30%;
     margin: 1rem;
     background: $light;
     border-radius: $radius-default;
     // border: 1px solid black;
     box-shadow: 0 0.5rem 0.5rem 0 $shadow;
-  }
-  h1 {
-    font-size: 2.5rem;
-    margin: 1rem 0;
-    padding: 0 1rem;
-  }
-  img {
-    object-fit: fill;
-    width: 100%;
-    border-radius: $radius-default $radius-default 0 0;
-  }
-  p {
-    margin: 1rem 0;
-    padding: 0 1rem;
-  }
-  .infoPanel {
-    @include flex();
-    justify-content: space-between;
-    margin-bottom: 1rem;
-    padding: 0 1rem;
-    .viewBtn {
-      @include btn();
+
+    h1 {
+      font-size: 2.5rem;
+      margin: 1rem 0;
+      padding: 0 1rem;
     }
-    .cartBtn {
-      @include btn();
-      border: 1px solid $shadow;
-      border-radius: 0 $radius-default $radius-default 0;
-      background: $light;
-      color: $dark;
+    img {
+      object-fit: fill;
+      width: 100%;
+      border-radius: $radius-default $radius-default 0 0;
     }
-    .price {
-      padding: 1rem 0;
+    p {
+      margin: 1rem 0;
+      padding: 0 1rem;
+    }
+    .infoPanel {
+      @include flex();
+      justify-content: space-between;
+      margin-bottom: 1rem;
+      padding: 0 1rem;
+      .viewBtn {
+        @include btn();
+      }
+      .cartBtn {
+        @include btn();
+        border: 1px solid $shadow;
+        border-radius: 0 $radius-default $radius-default 0;
+        background: $light;
+        color: $dark;
+      }
+      .price {
+        padding: 1rem 0;
+      }
     }
   }
 }

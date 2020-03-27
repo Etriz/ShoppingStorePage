@@ -194,54 +194,55 @@ nav {
 main {
   padding: 3rem 0; }
   main .card {
+    min-width: 30%;
     margin: 1rem;
     background: #f6f7f5;
     border-radius: 5px;
     box-shadow: 0 0.5rem 0.5rem 0 #aca4ae; }
-  main h1 {
-    font-size: 2.5rem;
-    margin: 1rem 0;
-    padding: 0 1rem; }
-  main img {
-    object-fit: fill;
-    width: 100%;
-    border-radius: 5px 5px 0 0; }
-  main p {
-    margin: 1rem 0;
-    padding: 0 1rem; }
-  main .infoPanel {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    margin-bottom: 1rem;
-    padding: 0 1rem; }
-    main .infoPanel .viewBtn {
-      outline: none;
-      border: 1px solid #f44336;
-      border-radius: 5px 0 0 5px;
-      background: #f44336;
-      color: #f6f7f5;
-      padding: 1rem;
-      text-align: center;
-      cursor: pointer; }
-      main .infoPanel .viewBtn:hover {
-        background: #ba160a;
-        color: #f6f7f5; }
-    main .infoPanel .cartBtn {
-      outline: none;
-      border: 1px solid #f44336;
-      border-radius: 5px 0 0 5px;
-      background: #f44336;
-      color: #f6f7f5;
-      padding: 1rem;
-      text-align: center;
-      cursor: pointer;
-      border: 1px solid #aca4ae;
-      border-radius: 0 5px 5px 0;
-      background: #f6f7f5;
-      color: #2b272c; }
-      main .infoPanel .cartBtn:hover {
-        background: #ba160a;
-        color: #f6f7f5; }
-    main .infoPanel .price {
-      padding: 1rem 0; }
+    main .card h1 {
+      font-size: 2.5rem;
+      margin: 1rem 0;
+      padding: 0 1rem; }
+    main .card img {
+      object-fit: fill;
+      width: 100%;
+      border-radius: 5px 5px 0 0; }
+    main .card p {
+      margin: 1rem 0;
+      padding: 0 1rem; }
+    main .card .infoPanel {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      margin-bottom: 1rem;
+      padding: 0 1rem; }
+      main .card .infoPanel .viewBtn {
+        outline: none;
+        border: 1px solid #f44336;
+        border-radius: 5px 0 0 5px;
+        background: #f44336;
+        color: #f6f7f5;
+        padding: 1rem;
+        text-align: center;
+        cursor: pointer; }
+        main .card .infoPanel .viewBtn:hover {
+          background: #ba160a;
+          color: #f6f7f5; }
+      main .card .infoPanel .cartBtn {
+        outline: none;
+        border: 1px solid #f44336;
+        border-radius: 5px 0 0 5px;
+        background: #f44336;
+        color: #f6f7f5;
+        padding: 1rem;
+        text-align: center;
+        cursor: pointer;
+        border: 1px solid #aca4ae;
+        border-radius: 0 5px 5px 0;
+        background: #f6f7f5;
+        color: #2b272c; }
+        main .card .infoPanel .cartBtn:hover {
+          background: #ba160a;
+          color: #f6f7f5; }
+      main .card .infoPanel .price {
+        padding: 1rem 0; }
