@@ -190,3 +190,28 @@ nav {
       cursor: pointer; }
       .jumbo .shop .btn:hover {
         background: #ba160a; }
+
+main {
+  padding: 3rem 0; }
+  main .card {
+    max-width: 350px;
+    background: #f6f7f5;
+    border-radius: 5px;
+    box-shadow: 0 0.5rem 0.5rem 0 #aca4ae; }
+  main h1 {
+    font-size: 2.5rem;
+    margin: 1rem 0;
+    padding: 0 1rem; }
+  main img {
+    object-fit: fill;
+    width: 100%;
+    border-radius: 5px 5px 0 0; }
+  main p {
+    margin: 1rem 0;
+    padding: 0 1rem; }
+  main .infoPanel {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+    padding: 0 1rem; }

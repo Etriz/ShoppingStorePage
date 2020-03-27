@@ -1,0 +1,31 @@
+main {
+  padding: 3rem 0;
+  .card {
+    // border: 1px solid black;
+    max-width: 350px;
+    background: $light;
+    border-radius: $radius-default;
+    // border: 1px solid black;
+    box-shadow: 0 0.5rem 0.5rem 0 $shadow;
+  }
+  h1 {
+    font-size: 2.5rem;
+    margin: 1rem 0;
+    padding: 0 1rem;
+  }
+  img {
+    object-fit: fill;
+    width: 100%;
+    border-radius: $radius-default $radius-default 0 0;
+  }
+  p {
+    margin: 1rem 0;
+    padding: 0 1rem;
+  }
+  .infoPanel {
+    @include flex();
+    justify-content: space-between;
+    margin-bottom: 1rem;
+    padding: 0 1rem;
+  }
+}
