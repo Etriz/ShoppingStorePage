@@ -1,7 +1,7 @@
 import React from "react";
 import faker from "faker";
 import ProductCard from "./ProductCard";
-import products from "../products.json";
+import productsJson from "../products.json";
 
 export default function Header() {
   // let testFake = faker.fake("{{name.lastName}}, {{name.firstName}} {{name.suffix}}");
@@ -13,7 +13,7 @@ export default function Header() {
     return { desc: fakeDesc, price: fakePrice };
   };
 
-  const cardData = products.items.map(product => <ProductCard product={product} />);
+  const cardData = productsJson.items.map(product => <ProductCard product={product} />);
 
   return <main className="container">{cardData}</main>;
 }

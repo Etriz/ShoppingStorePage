@@ -13,7 +13,7 @@ export default function ProductCard(props) {
           <button className="viewBtn">View</button>
           <button className="cartBtn">Add To Cart</button>
         </div>
-        <span className="price">Price: ${data.fields.price}</span>
+        <div className="price">Price: ${data.fields.price}</div>
       </div>
     </div>
   );

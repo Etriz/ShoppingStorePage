@@ -137,7 +137,8 @@ nav {
   border-bottom: 1px solid black;
   background: #8a8e8d;
   color: #f6f7f5;
-  font-family: "Baloo 2", sans-serif; }
+  font-family: "Baloo 2", sans-serif;
+  min-height: 6rem; }
   nav .container {
     display: flex;
     flex-wrap: wrap;
@@ -145,9 +146,34 @@ nav {
     width: 70%;
     margin: 0 auto;
     padding: 1rem 0; }
+    nav .container .menuBtn {
+      cursor: pointer; }
     nav .container .logo {
       font-size: 3rem;
       text-align: center; }
+
+.menu {
+  width: 90%;
+  max-width: 500px;
+  height: calc(100% - 6rem);
+  position: absolute;
+  left: 0;
+  background: rgba(43, 39, 44, 0.95);
+  display: flex;
+  flex-wrap: wrap; }
+  .menu.hide {
+    left: -100%; }
+  .menu a {
+    width: 100%;
+    max-width: 500px;
+    min-height: 10rem;
+    border-bottom: 1px solid #f6f7f5;
+    color: #f6f7f5;
+    padding: 1rem;
+    text-decoration: none;
+    text-align: center; }
+    .menu a:hover {
+      background: #2b272c; }
 
 .container {
   display: flex;
@@ -195,6 +221,7 @@ main {
   padding: 3rem 0; }
   main .card {
     min-width: 30%;
+    width: 350px;
     margin: 1rem;
     background: #f6f7f5;
     border-radius: 5px;
@@ -240,7 +267,8 @@ main {
         border: 1px solid #aca4ae;
         border-radius: 0 5px 5px 0;
         background: #f6f7f5;
-        color: #2b272c; }
+        color: #2b272c;
+        margin-right: 3rem; }
         main .card .infoPanel .cartBtn:hover {
           background: #ba160a;
           color: #f6f7f5; }
