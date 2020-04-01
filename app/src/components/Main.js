@@ -3,7 +3,7 @@ import faker from "faker";
 import ProductCard from "./ProductCard";
 import productsJson from "../products.json";
 
-export default function Header() {
+export default function Main() {
   // let testFake = faker.fake("{{name.lastName}}, {{name.firstName}} {{name.suffix}}");
 
   const createProduct = () => {

@@ -1,6 +1,6 @@
 import React from "react";
 
-export default function Header() {
+export default function Cart() {
   return (
     <div className="cart container">
       {/* <span className="menuBtn">Menu</span>

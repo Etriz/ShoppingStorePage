@@ -160,7 +160,8 @@ nav {
   left: 0;
   background: rgba(43, 39, 44, 0.95);
   display: flex;
-  flex-wrap: wrap; }
+  flex-wrap: wrap;
+  transition: all 500ms; }
   .menu.hide {
     left: -100%; }
   .menu a {
