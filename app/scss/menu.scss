@@ -2,7 +2,8 @@
   width: 90%;
   max-width: 500px;
   height: calc(100% - #{$navheight});
-  position: absolute;
+  position: fixed;
+  top: $navheight;
   left: 0;
   background: fade-out($dark, 0.05);
   @include flex();

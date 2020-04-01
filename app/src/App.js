@@ -20,6 +20,8 @@ function App() {
     } else {
       setMenuClass("");
       setMenuHidden(!menuHidden);
+      setCartClass("hide");
+      setCartHidden(true);
     }
   };
 
@@ -31,6 +33,8 @@ function App() {
     } else {
       setCartClass("");
       setCartHidden(!cartHidden);
+      setMenuClass("hide");
+      setMenuHidden(true);
     }
   };
 

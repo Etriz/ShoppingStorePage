@@ -2,10 +2,13 @@
 @import url("https://fonts.googleapis.com/css?family=Baloo+2&display=swap");
 nav {
   border-bottom: 1px solid black;
-  background: $mid-light;
-  color: $light;
+  background: $light;
+  color: $dark;
   font-family: $font-default;
   min-height: $navheight;
+  position: fixed;
+  top: 0;
+  width: 100%;
   .container {
     @include flex();
     justify-content: space-between;
@@ -14,13 +17,18 @@ nav {
     padding: 1rem 0;
     .menuBtn {
       cursor: pointer;
+      // background-image: url("../public/images/menu.png");
     }
     .cartBtn {
       cursor: pointer;
+      // background-image: url(images/cart.png);
     }
     .logo {
       font-size: 3rem;
       text-align: center;
+      span {
+        color: $danger;
+      }
     }
   }
 }

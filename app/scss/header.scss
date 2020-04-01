@@ -14,13 +14,15 @@
   font-family: $font-default;
   text-align: center;
   padding: 3rem;
+  margin-top: $navheight;
   .shop {
     @include flex();
     border-radius: $radius-default;
     background: rgba(255, 255, 255, 0.75);
     text-transform: uppercase;
     text-align: center;
-    max-width: 60%;
+    width: 60%;
+    max-width: 750px;
     padding: 2rem 1rem;
     margin: 5% auto;
     h1 {

@@ -135,10 +135,13 @@ body {
 
 nav {
   border-bottom: 1px solid black;
-  background: #8a8e8d;
-  color: #f6f7f5;
+  background: #f6f7f5;
+  color: #2b272c;
   font-family: "Baloo 2", sans-serif;
-  min-height: 6rem; }
+  min-height: 6rem;
+  position: fixed;
+  top: 0;
+  width: 100%; }
   nav .container {
     display: flex;
     flex-wrap: wrap;
@@ -153,12 +156,15 @@ nav {
     nav .container .logo {
       font-size: 3rem;
       text-align: center; }
+      nav .container .logo span {
+        color: #f44336; }
 
 .menu {
   width: 90%;
   max-width: 500px;
   height: calc(100% - 6rem);
-  position: absolute;
+  position: fixed;
+  top: 6rem;
   left: 0;
   background: rgba(43, 39, 44, 0.95);
   display: flex;
@@ -179,32 +185,23 @@ nav {
       background: #2b272c; }
 
 .cart {
-  width: 90%;
-  max-width: 500px;
+  width: 425px;
   height: calc(100% - 6rem);
-  position: absolute;
+  max-height: 500px;
+  position: fixed;
+  top: 6rem;
   right: 0%;
-  background: rgba(43, 39, 44, 0.95);
-  display: flex;
-  flex-wrap: wrap;
-  transition: left 500ms;
-  transition: width 5ms;
-  transform: translateX();
-  display: default; }
+  background: #f6f7f5;
+  border-top: none;
+  border-radius: 0 0 0 5px;
+  box-shadow: 0 0.5rem 0.5rem 0 #aca4ae;
+  transition: all 500ms; }
   .cart.hide {
-    left: 100%;
-    display: none; }
-  .cart a {
-    width: 100%;
-    max-width: 500px;
-    min-height: 10rem;
-    border-bottom: 1px solid #f6f7f5;
-    color: #f6f7f5;
-    padding: 1rem;
-    text-decoration: none;
-    text-align: center; }
-    .cart a:hover {
-      background: #2b272c; }
+    right: -425px; }
+  .cart h1 {
+    font-size: 3rem;
+    text-align: center;
+    padding: 1rem; }
 
 .container {
   display: flex;
@@ -221,7 +218,8 @@ nav {
   max-height: 500px;
   font-family: "Baloo 2", sans-serif;
   text-align: center;
-  padding: 3rem; }
+  padding: 3rem;
+  margin-top: 6rem; }
   .jumbo .shop {
     display: flex;
     flex-wrap: wrap;
@@ -229,7 +227,8 @@ nav {
     background: rgba(255, 255, 255, 0.75);
     text-transform: uppercase;
     text-align: center;
-    max-width: 60%;
+    width: 60%;
+    max-width: 750px;
     padding: 2rem 1rem;
     margin: 5% auto; }
     .jumbo .shop h1 {

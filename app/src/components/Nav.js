@@ -5,13 +5,11 @@ export default function Nav(props) {
   return (
     <nav>
       <div className="container">
-        <span className="menuBtn" onClick={props.toggleMenu}>
-          Menu
-        </span>
-        <h1 className="logo">HomeHideaway</h1>
-        <span className="cartBtn" onClick={props.toggleCart}>
-          Cart
-        </span>
+        <span className="fas fa-bars fa-2x menuBtn" onClick={props.toggleMenu}></span>
+        <h1 className="logo">
+          Home<span>Hideaway</span>
+        </h1>
+        <span className="fas fa-shopping-cart fa-2x cartBtn" onClick={props.toggleCart}></span>
       </div>
     </nav>
   );
