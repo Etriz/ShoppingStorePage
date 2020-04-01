@@ -1,11 +1,11 @@
 import React from "react";
 
-export default function Cart() {
+export default function Cart(props) {
   return (
-    <div className="cart container">
-      {/* <span className="menuBtn">Menu</span>
-        <h1 className="logo">HomeHideaway</h1>
-        <span className="cartBtn">Cart</span> */}
+    <div className={`cart ${props.className}`}>
+      <a href="index.html">Link 01</a>
+      <a href="index.html">Link 02</a>
+      <a href="index.html">Link 03</a>
     </div>
   );
 }

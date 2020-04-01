@@ -148,6 +148,8 @@ nav {
     padding: 1rem 0; }
     nav .container .menuBtn {
       cursor: pointer; }
+    nav .container .cartBtn {
+      cursor: pointer; }
     nav .container .logo {
       font-size: 3rem;
       text-align: center; }
@@ -174,6 +176,34 @@ nav {
     text-decoration: none;
     text-align: center; }
     .menu a:hover {
+      background: #2b272c; }
+
+.cart {
+  width: 90%;
+  max-width: 500px;
+  height: calc(100% - 6rem);
+  position: absolute;
+  right: 0%;
+  background: rgba(43, 39, 44, 0.95);
+  display: flex;
+  flex-wrap: wrap;
+  transition: left 500ms;
+  transition: width 5ms;
+  transform: translateX();
+  display: default; }
+  .cart.hide {
+    left: 100%;
+    display: none; }
+  .cart a {
+    width: 100%;
+    max-width: 500px;
+    min-height: 10rem;
+    border-bottom: 1px solid #f6f7f5;
+    color: #f6f7f5;
+    padding: 1rem;
+    text-decoration: none;
+    text-align: center; }
+    .cart a:hover {
       background: #2b272c; }
 
 .container {

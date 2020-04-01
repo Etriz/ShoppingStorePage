@@ -9,7 +9,9 @@ export default function Nav(props) {
           Menu
         </span>
         <h1 className="logo">HomeHideaway</h1>
-        <span className="cartBtn">Cart</span>
+        <span className="cartBtn" onClick={props.toggleCart}>
+          Cart
+        </span>
       </div>
     </nav>
   );
