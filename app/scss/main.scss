@@ -36,7 +36,7 @@ main {
         @include btn();
         border: 1px solid $shadow;
         border-radius: 0 $radius-default $radius-default 0;
-        background: $light;
+        background: white;
         color: $dark;
         margin-right: 3rem;
       }

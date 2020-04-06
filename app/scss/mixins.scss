@@ -13,6 +13,7 @@
   cursor: pointer;
   &:hover {
     background: darken($danger, 20%);
+    border: 1px solid darken($danger, 20%);
     color: $light;
   }
 }
