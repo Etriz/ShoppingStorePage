@@ -15,6 +15,7 @@ export default function Main(props) {
 
   const cardData = productsJson.items.map(item => (
     <ProductCard
+      key={item.sys.id}
       product={item}
       cartContents={props.cartContents}
       setCartContents={props.setCartContents}
