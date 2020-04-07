@@ -1,19 +1,28 @@
 import React from "react";
 
 export default function ProductCard(props) {
-  const data = props.product;
+  const product = props.product;
+  const cartContents = props.cartContents;
+  const setCartContents = props.setCartContents;
+
+  const addToCart = () => {
+    const productToAdd = [product.fields.title.toUpperCase(), product.fields.price];
+    setCartContents([...cartContents, productToAdd]);
+    console.log("Added to cart");
+  };
 
   return (
-    <div className="card" key={data.sys.id}>
-      <img src={data.fields.image.fields.file.url} alt="product" />
-      <h1>{data.fields.title.toUpperCase()}</h1>
-      {/* <p>{props.createProduct().desc}</p> */}
+    <div className="card" key={product.sys.id}>
+      <img src={product.fields.image.fields.file.url} alt="product" />
+      <h1>{product.fields.title.toUpperCase()}</h1>
       <div className="infoPanel">
         <div className="btnGrp">
           <button className="viewBtn">View</button>
-          <button className="cartBtn">Add To Cart</button>
+          <button className="cartBtn" onClick={addToCart}>
+            Add To Cart
+          </button>
         </div>
-        <div className="price">Price: ${data.fields.price}</div>
+        <div className="price">Price: ${product.fields.price}</div>
       </div>
     </div>
   );

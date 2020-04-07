@@ -12,8 +12,9 @@ function App() {
   const [cartHidden, setCartHidden] = useState(true);
   const [cartClass, setCartClass] = useState("hide");
 
+  const [cartContents, setCartContents] = useState([]);
+
   const toggleMenu = () => {
-    console.log(`Menu button clicked!`, menuHidden);
     if (!menuHidden) {
       setMenuClass("hide");
       setMenuHidden(!menuHidden);
@@ -26,7 +27,6 @@ function App() {
   };
 
   const toggleCart = () => {
-    console.log(`Cart button clicked!`, cartHidden);
     if (!cartHidden) {
       setCartClass("hide");
       setCartHidden(!cartHidden);
@@ -42,9 +42,9 @@ function App() {
     <div>
       <Nav toggleMenu={toggleMenu} toggleCart={toggleCart} />
       <Menu className={menuClass} />
-      <Cart className={cartClass} />
+      <Cart className={cartClass} cartContents={cartContents} />
       <Header />
-      <Main />
+      <Main cartContents={cartContents} setCartContents={setCartContents} />
     </div>
   );
 }

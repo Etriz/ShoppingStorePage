@@ -284,6 +284,7 @@ main {
         cursor: pointer; }
         main .card .infoPanel .viewBtn:hover {
           background: #ba160a;
+          border: 1px solid #ba160a;
           color: #f6f7f5; }
       main .card .infoPanel .cartBtn {
         outline: none;
@@ -296,11 +297,12 @@ main {
         cursor: pointer;
         border: 1px solid #aca4ae;
         border-radius: 0 5px 5px 0;
-        background: #f6f7f5;
+        background: white;
         color: #2b272c;
         margin-right: 3rem; }
         main .card .infoPanel .cartBtn:hover {
           background: #ba160a;
+          border: 1px solid #ba160a;
           color: #f6f7f5; }
       main .card .infoPanel .price {
         padding: 1rem 0; }
