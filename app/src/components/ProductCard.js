@@ -10,10 +10,11 @@ export default function ProductCard(props) {
   const productTitle = product.fields.title.toUpperCase();
   const productPrice = product.fields.price;
 
+  const viewProduct = () => {};
   const addToCart = () => {
-    const productToAdd = [productTitle, productPrice];
+    const productToAdd = { title: productTitle, price: productPrice };
     setCartContents([...cartContents, productToAdd]);
-    console.log("Added to cart");
+    console.log(`Added ${productTitle} to cart`);
   };
 
   return (
@@ -22,7 +23,9 @@ export default function ProductCard(props) {
       <h1>{productTitle}</h1>
       <div className="infoPanel">
         <div className="btnGrp">
-          <button className="viewBtn">View</button>
+          <button className="viewBtn" onClick={viewProduct}>
+            View
+          </button>
           <button className="cartBtn" onClick={addToCart}>
             Add To Cart
           </button>

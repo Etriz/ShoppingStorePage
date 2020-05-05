@@ -16,12 +16,15 @@ $varWidth: 425px;
   // @include flex();
   transition: all 500ms;
   &.hide {
-    right: -425px;
+    right: -430px;
   }
   h1 {
     font-size: 3rem;
     // color: $light;
     text-align: center;
+    padding: 1rem;
+  }
+  .cartItem {
     padding: 1rem;
   }
 }

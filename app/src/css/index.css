@@ -197,10 +197,12 @@ nav {
   box-shadow: 0 0.5rem 0.5rem 0 #aca4ae;
   transition: all 500ms; }
   .cart.hide {
-    right: -425px; }
+    right: -430px; }
   .cart h1 {
     font-size: 3rem;
     text-align: center;
+    padding: 1rem; }
+  .cart .cartItem {
     padding: 1rem; }
 
 .container {
