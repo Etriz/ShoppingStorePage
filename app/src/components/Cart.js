@@ -1,7 +1,8 @@
-import React from "react";
+import React, { useContext } from "react";
+import storeContext from "../contexts/StoreContext";
 
 export default function Cart(props) {
-  const cart = props.cartContents;
+  const { cartContents } = useContext(storeContext);
 
   const noItems = (
     <div className="cartItem">
@@ -9,16 +10,21 @@ export default function Cart(props) {
     </div>
   );
 
-  const displayCart = cart.map((item, index) => (
-    <div className="cartItem" key={index}>
+  const deleteItem = (id) => {
+    cartContents.filter((item) => item.sys.id !== id);
+  };
+
+  const displayCart = cartContents.map((item) => (
+    <div className="cartItem" key={item.sys.id}>
       <p>{item.title}</p>
       <p>{item.price}</p>
+      <span onClick={() => deleteItem(item.sys.id)}>X</span>
       <hr />
     </div>
   ));
   const cartTotal = () => {
     let total = 0;
-    cart.forEach((item) => {
+    cartContents.forEach((item) => {
       total += item.price;
     });
     return (
@@ -32,7 +38,7 @@ export default function Cart(props) {
     <div className={`cart ${props.className}`}>
       <h1>Shopping Cart</h1>
       <hr />
-      {cart.length === 0 ? noItems : displayCart}
+      {cartContents.length === 0 ? noItems : displayCart}
       {cartTotal()}
     </div>
   );
