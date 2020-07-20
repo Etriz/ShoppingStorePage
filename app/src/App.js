@@ -15,7 +15,6 @@ function App() {
   const [cartHidden, setCartHidden] = useState(true);
   const [cartClass, setCartClass] = useState("hide");
 
-  // const [cartContents, setCartContents] = useState([]);
   const [cartContents, setCartContents] = useLocalStorage("cartContents", []);
 
   const toggleMenu = () => {
@@ -49,7 +48,7 @@ function App() {
         <Menu className={menuClass} />
         <Cart className={cartClass} />
         <Header />
-        <Main cartContents={cartContents} setCartContents={setCartContents} />
+        <Main />
       </div>
     </StoreContext.Provider>
   );

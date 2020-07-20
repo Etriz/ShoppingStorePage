@@ -1,9 +1,13 @@
-import React from "react";
+import React, { useContext } from "react";
+import storeContext from "../contexts/StoreContext";
+
 // import faker from "faker";
 import ProductCard from "./ProductCard";
 import productsJson from "../products.json";
 
-export default function Main(props) {
+export default function Main() {
+  const { cartContents, setCartContents } = useContext(storeContext);
+
   // let testFake = faker.fake("{{name.lastName}}, {{name.firstName}} {{name.suffix}}");
 
   // const createProduct = () => {
@@ -13,12 +17,12 @@ export default function Main(props) {
   //   return { desc: fakeDesc, price: fakePrice };
   // };
 
-  const cardData = productsJson.items.map(item => (
+  const cardData = productsJson.items.map((item) => (
     <ProductCard
       key={item.sys.id}
       product={item}
-      cartContents={props.cartContents}
-      setCartContents={props.setCartContents}
+      cartContents={cartContents}
+      setCartContents={setCartContents}
     />
   ));
 
