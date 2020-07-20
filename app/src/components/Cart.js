@@ -2,7 +2,7 @@ import React, { useContext } from "react";
 import storeContext from "../contexts/StoreContext";
 
 export default function Cart(props) {
-  const { cartContents } = useContext(storeContext);
+  const { cartContents, setCartContents } = useContext(storeContext);
 
   const noItems = (
     <div className="cartItem">
@@ -10,15 +10,18 @@ export default function Cart(props) {
     </div>
   );
 
-  const deleteItem = (id) => {
-    cartContents.filter((item) => item.sys.id !== id);
+  const deleteItem = (index) => {
+    // console.log("delete click, index:", index);
+    const cart = cartContents;
+    cart.splice(index, 1);
+    setCartContents([...cart]);
   };
 
-  const displayCart = cartContents.map((item) => (
-    <div className="cartItem" key={item.sys.id}>
+  const displayCart = cartContents.map((item, index) => (
+    <div className="cartItem" key={index}>
       <p>{item.title}</p>
       <p>{item.price}</p>
-      <span onClick={() => deleteItem(item.sys.id)}>X</span>
+      <span onClick={() => deleteItem(index)}>X</span>
       <hr />
     </div>
   ));
@@ -29,7 +32,7 @@ export default function Cart(props) {
     });
     return (
       <div className="cartItem">
-        <p>Your total is ${total}</p>
+        <p>Your total is ${Number(total).toFixed(2)}</p>
       </div>
     );
   };
