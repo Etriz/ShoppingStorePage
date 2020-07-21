@@ -42,9 +42,9 @@ function App() {
   };
 
   return (
-    <StoreContext.Provider value={{ cartContents, setCartContents }}>
+    <StoreContext.Provider value={{ cartContents, setCartContents, toggleCart, toggleMenu }}>
       <div>
-        <Nav toggleMenu={toggleMenu} toggleCart={toggleCart} />
+        <Nav />
         <Menu className={menuClass} />
         <Cart className={cartClass} />
         <Header />
