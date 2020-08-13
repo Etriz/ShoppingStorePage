@@ -3,7 +3,7 @@ import storeContext from "../contexts/StoreContext";
 
 // import faker from "faker";
 import ProductCard from "./ProductCard";
-import productsJson from "../products.json";
+import productsJSON from "../products.json";
 
 export default function Main() {
   const { cartContents, setCartContents } = useContext(storeContext);
@@ -17,7 +17,7 @@ export default function Main() {
   //   return { desc: fakeDesc, price: fakePrice };
   // };
 
-  const cardData = productsJson.items.map((item) => (
+  const cardData = productsJSON.items.map((item) => (
     <ProductCard
       key={item.sys.id}
       product={item}
