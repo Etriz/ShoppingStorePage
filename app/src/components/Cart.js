@@ -19,9 +19,11 @@ export default function Cart(props) {
 
   const displayCart = cartContents.map((item, index) => (
     <div className="cartItem" key={index}>
-      <p>{item.title}</p>
-      <p>{item.price}</p>
-      <span onClick={() => deleteItem(index)}>X</span>
+      <p className="itemTitle">{item.title}</p>
+      <p>${item.price}</p>
+      <button className="cartBtn" onClick={() => deleteItem(index)}>
+        Remove
+      </button>
       <hr />
     </div>
   ));

@@ -204,6 +204,8 @@ nav {
     padding: 1rem; }
   .cart .cartItem {
     padding: 1rem; }
+    .cart .cartItem .itemTitle {
+      font-size: 1.5em; }
 
 .container {
   display: flex;
