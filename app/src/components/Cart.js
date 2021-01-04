@@ -20,11 +20,10 @@ export default function Cart(props) {
   const displayCart = cartContents.map((item, index) => (
     <div className="cartItem" key={index}>
       <p className="itemTitle">{item.title}</p>
-      <p>${item.price}</p>
+      <p className="itemText">${item.price}</p>
       <button className="cartBtn" onClick={() => deleteItem(index)}>
-        Remove
+        X
       </button>
-      <hr />
     </div>
   ));
   const cartTotal = () => {
@@ -33,8 +32,10 @@ export default function Cart(props) {
       total += item.price;
     });
     return (
-      <div className="cartItem">
-        <p>Your total is ${Number(total).toFixed(2)}</p>
+      <div className="cartItem" style={{ border: 0 }}>
+        {/* <p>Your total is ${Number(total).toFixed(2)}</p> */}
+        <p className="itemTitle">Total</p>
+        <p className="itemText">${Number(total).toFixed(2)}</p>
       </div>
     );
   };
@@ -45,6 +46,7 @@ export default function Cart(props) {
       <hr />
       {cartContents.length === 0 ? noItems : displayCart}
       {cartTotal()}
+      <button className="checkoutBtn">Checkout Now</button>
     </div>
   );
 }
