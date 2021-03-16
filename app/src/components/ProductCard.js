@@ -1,5 +1,5 @@
-import React from "react";
-import Modal from "../components/Modal";
+import React from 'react';
+// import Modal from "../components/Modal";
 
 export default function ProductCard(props) {
   const product = props.product;
