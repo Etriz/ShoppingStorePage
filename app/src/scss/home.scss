@@ -1,0 +1,61 @@
+.container {
+  @include flex();
+  justify-content: space-between;
+  width: 70%;
+  margin: 0 auto;
+}
+.bedroom {
+  background-image: url("https://source.unsplash.com/iAftdIcgpFc");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  //   min-height: 500px;
+  max-height: 500px;
+  font-family: $font-default;
+  text-align: center;
+  padding: 3rem;
+  margin-top: $navheight;
+}
+.furniture {
+  background-image: url("https://source.unsplash.com/hAh4Unn50gk");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  //   min-height: 500px;
+  max-height: 500px;
+  font-family: $font-default;
+  text-align: center;
+  padding: 3rem;
+  margin-top: $navheight;
+}
+.shop {
+  @include flex();
+  border-radius: $radius-default;
+  background: rgba(255, 255, 255, 0.75);
+  text-transform: uppercase;
+  text-align: center;
+  width: 60%;
+  max-width: 750px;
+  padding: 2rem 1rem;
+  margin: 5% auto;
+  h1 {
+    font-size: 4rem;
+    width: 100%;
+  }
+  .btn {
+    margin: 2rem auto 0;
+    outline: none;
+    border: none;
+    border-radius: $radius-default;
+    background: $danger;
+    color: $light;
+    text-decoration: none;
+    font-size: 2rem;
+    padding: 1rem;
+    text-align: center;
+    cursor: pointer;
+    &:hover {
+      background: darken($danger, 20%);
+    }
+  }
+}

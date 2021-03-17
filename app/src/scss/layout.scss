@@ -2,7 +2,7 @@
 @import url("https://fonts.googleapis.com/css?family=Baloo+2&display=swap");
 nav {
   border-bottom: 1px solid black;
-  background: $light;
+  background: $mid-light;
   color: $dark;
   font-family: $font-default;
   min-height: $navheight;
@@ -12,23 +12,27 @@ nav {
   .container {
     @include flex();
     justify-content: space-between;
-    width: 70%;
+    align-items: center;
+    width: 75%;
     margin: 0 auto;
     padding: 1rem 0;
-    .menuBtn {
-      cursor: pointer;
-      // background-image: url("../public/images/menu.png");
-    }
-    .cartBtn {
-      cursor: pointer;
-      // background-image: url(images/cart.png);
-    }
-    .logo {
-      font-size: 3rem;
+    .homeLink{
+      color:$dark;
+      text-decoration: none;
+      .logo {
+      font-size: 3.5rem;
       text-align: center;
       span {
         color: $danger;
       }
     }
+    }
+    .menuBtn {
+      cursor: pointer;
+    }
+    .cartBtn {
+      cursor: pointer;
+    }
+
   }
 }

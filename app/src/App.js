@@ -1,55 +1,27 @@
-import React, { useState } from "react";
-import { useLocalStorage } from "./hooks/useLocalStorage";
-import StoreContext from "./contexts/StoreContext";
+import React from 'react';
+import { BrowserRouter, Route } from 'react-router-dom';
+import { useLocalStorage } from './hooks/useLocalStorage';
+import StoreContext from './contexts/StoreContext';
 
-import Nav from "./components/Nav";
-import Header from "./components/Header";
-import Main from "./components/Main";
-import Menu from "./components/Menu";
-import Cart from "./components/Cart";
+import Layout from './components/Layout';
+import Home from './components/Home';
+import Main from './components/Main';
 
 function App() {
-  const [menuHidden, setMenuHidden] = useState(true);
-  const [menuClass, setMenuClass] = useState("hide");
-
-  const [cartHidden, setCartHidden] = useState(true);
-  const [cartClass, setCartClass] = useState("hide");
-
-  const [cartContents, setCartContents] = useLocalStorage("cartContents", []);
-
-  const toggleMenu = () => {
-    if (!menuHidden) {
-      setMenuClass("hide");
-      setMenuHidden(!menuHidden);
-    } else {
-      setMenuClass("");
-      setMenuHidden(!menuHidden);
-      setCartClass("hide");
-      setCartHidden(true);
-    }
-  };
-
-  const toggleCart = () => {
-    if (!cartHidden) {
-      setCartClass("hide");
-      setCartHidden(!cartHidden);
-    } else {
-      setCartClass("");
-      setCartHidden(!cartHidden);
-      setMenuClass("hide");
-      setMenuHidden(true);
-    }
-  };
+  const [cartContents, setCartContents] = useLocalStorage('cartContents', []);
 
   return (
-    <StoreContext.Provider value={{ cartContents, setCartContents, toggleCart, toggleMenu }}>
-      <div>
-        <Nav />
-        <Menu className={menuClass} />
-        <Cart className={cartClass} />
-        <Header />
-        <Main />
-      </div>
+    <StoreContext.Provider value={{ cartContents, setCartContents }}>
+      <BrowserRouter>
+        <Layout>
+          <Route exact path="/">
+            <Home />
+          </Route>
+          <Route path="/bedroom">
+            <Main />
+          </Route>
+        </Layout>
+      </BrowserRouter>
     </StoreContext.Provider>
   );
 }

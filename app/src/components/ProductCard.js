@@ -1,10 +1,10 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import storeContext from '../contexts/StoreContext';
+
 // import Modal from "../components/Modal";
 
-export default function ProductCard(props) {
-  const product = props.product;
-  const cartContents = props.cartContents;
-  const setCartContents = props.setCartContents;
+export default function ProductCard({ product }) {
+  const { cartContents, setCartContents } = useContext(storeContext);
 
   const productKey = product.sys.id;
   const productImage = product.fields.image.fields.file.url;
@@ -13,7 +13,7 @@ export default function ProductCard(props) {
 
   const viewProduct = () => {};
   const addToCart = () => {
-    const productToAdd = { title: productTitle, price: productPrice };
+    const productToAdd = { id: productKey, title: productTitle, price: productPrice };
     setCartContents([...cartContents, productToAdd]);
     console.log(`Added ${productTitle} to cart`);
   };
