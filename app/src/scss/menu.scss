@@ -1,12 +1,14 @@
 .menu {
   width: 90%;
   max-width: 500px;
-  height: calc(100% - #{$navheight});
+  // height: calc(50% - #{$navheight});
   position: fixed;
   top: $navheight;
   left: 0;
   background: fade-out($dark, 0.05);
+  border-radius: 0 0 $radius-default 0;
   @include flex();
+  flex-direction: column;
   transition: all 500ms;
   &.hide {
     left: -100%;
@@ -14,11 +16,12 @@
   a {
     width: 100%;
     max-width: 500px;
-    min-height: 10rem;
+    // min-height: 8rem;
     border-bottom: 1px solid $light;
     color: $light;
-    // margin: 2rem auto 0 0;
-    padding: 1rem;
+    font-size: 2rem;
+    // margin: 2rem auto;
+    padding: 2.5rem;
     text-decoration: none;
     text-align: center;
     &:hover {

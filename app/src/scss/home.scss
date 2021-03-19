@@ -1,37 +1,37 @@
 .container {
   @include flex();
-  justify-content: space-between;
+  justify-content: center;
   width: 70%;
   margin: 0 auto;
 }
-.bedroom {
-  background-image: url("https://source.unsplash.com/iAftdIcgpFc");
+.products {
+  background-image: none;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
+  margin-top: $navheight;
   //   min-height: 500px;
   max-height: 500px;
   font-family: $font-default;
   text-align: center;
   padding: 3rem;
+  margin-top: 1rem;
+}
+.all {
+  background-image: url('https://source.unsplash.com/7JX0-bfiuxQ');
   margin-top: $navheight;
 }
+.bedroom {
+  background-image: url('https://source.unsplash.com/iAftdIcgpFc');
+}
 .furniture {
-  background-image: url("https://source.unsplash.com/hAh4Unn50gk");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  //   min-height: 500px;
-  max-height: 500px;
-  font-family: $font-default;
-  text-align: center;
-  padding: 3rem;
-  margin-top: $navheight;
+  background-image: url('https://source.unsplash.com/hAh4Unn50gk');
 }
 .shop {
   @include flex();
   border-radius: $radius-default;
   background: rgba(255, 255, 255, 0.75);
+  backdrop-filter: blur(0.25rem);
   text-transform: uppercase;
   text-align: center;
   width: 60%;

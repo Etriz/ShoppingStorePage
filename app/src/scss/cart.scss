@@ -8,11 +8,9 @@ $varWidth: 425px;
   top: $navheight;
   right: 0%;
   background: $light;
-  // background: fade-out($dark, 0.05);
+  border: 1px solid $dark;
   border-top: none;
   border-radius: 0 0 0 $radius-default;
-  box-shadow: 0 0.5rem 0.5rem 0 $shadow;
-  // @include flex();
   transition: all 500ms;
   &.hide {
     right: -$varWidth - 5;
