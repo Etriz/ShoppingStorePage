@@ -1,0 +1,51 @@
+.view {
+  width: 350px;
+  min-width: 50%;
+  margin: 1rem;
+  a {
+    color: $dark;
+    text-decoration: none;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+  img {
+    object-fit: fill;
+    width: 100%;
+    border-radius: $radius-default;
+    margin: 2rem 0 0;
+  }
+  .title {
+    font-size: 2.5rem;
+    margin: 1rem 0;
+  }
+
+  p {
+    line-height: 1.25;
+  }
+
+  .price {
+    font-size: 2rem;
+    font-weight: bold;
+    margin: 1rem 0;
+  }
+  .cartBtn {
+    @include btn();
+    border: 2px solid $danger;
+    border-radius: $radius-default;
+    font-size: 1.5rem;
+    background: white;
+    color: $dark;
+    margin: 2rem 0 0;
+    &:hover {
+      border: 2px solid darken($danger, 20%);
+    }
+  }
+  .confirm {
+    color: $danger;
+    font-weight: bold;
+    text-transform: uppercase;
+    display: block;
+    margin: 1rem 0 0;
+  }
+}

@@ -8,6 +8,7 @@ import Home from './components/Home';
 import Bedroom from './components/Bedroom';
 import Furniture from './components/Furniture';
 import AllProducts from './components/AllProducts';
+import ViewProduct from './components/ViewProduct';
 
 function App() {
   const [menuHidden, setMenuHidden] = useState(true);
@@ -44,6 +45,9 @@ function App() {
           </Route>
           <Route path="/all">
             <AllProducts />
+          </Route>
+          <Route path="/products/:productId">
+            <ViewProduct />
           </Route>
         </Layout>
       </BrowserRouter>
