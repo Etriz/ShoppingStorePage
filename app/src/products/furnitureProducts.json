@@ -1,0 +1,34 @@
+{
+  "items": [
+    {
+      "sys": {
+        "id": "5"
+      },
+      "title": "fridge",
+      "price": 88.99,
+      "image": {
+        "url": "./images/product-5.jpeg"
+      }
+    },
+    {
+      "sys": {
+        "id": "7"
+      },
+      "title": "couch",
+      "price": 45.99,
+      "image": {
+        "url": "./images/product-7.jpeg"
+      }
+    },
+    {
+      "sys": {
+        "id": "8"
+      },
+      "title": "table",
+      "price": 33.99,
+      "image": {
+        "url": "./images/product-8.jpeg"
+      }
+    }
+  ]
+}
