@@ -7,9 +7,9 @@ export default function ProductCard({ product }) {
   const { cartContents, setCartContents } = useContext(storeContext);
 
   const productKey = product.sys.id;
-  const productImage = product.fields.image.fields.file.url;
-  const productTitle = product.fields.title.toUpperCase();
-  const productPrice = product.fields.price;
+  const productImage = product.image.url;
+  const productTitle = product.title.toUpperCase();
+  const productPrice = product.price;
 
   const viewProduct = () => {};
   const addToCart = () => {

@@ -1,36 +1,35 @@
-import React, { useState } from 'react';
+import React, { useState, useContext, useEffect } from 'react';
 import { Link } from 'react-router-dom';
+import StoreContext from '../contexts/StoreContext';
 
 import Menu from './Menu';
 import Cart from './Cart';
 
-const Layout = ({ children }) => {
-  const [menuHidden, setMenuHidden] = useState(true);
-  const [menuClass, setMenuClass] = useState('hide');
+export default function Layout({ children }) {
+  const { menuHidden, setMenuHidden, cartHidden, setCartHidden } = useContext(StoreContext);
 
-  const [cartHidden, setCartHidden] = useState(true);
+  const [menuClass, setMenuClass] = useState('hide');
   const [cartClass, setCartClass] = useState('hide');
+
+  useEffect(() => {
+    menuHidden ? setMenuClass('hide') : setMenuClass('');
+    cartHidden ? setCartClass('hide') : setCartClass('');
+  }, [menuHidden, cartHidden]);
 
   const toggleMenu = () => {
     if (!menuHidden) {
-      setMenuClass('hide');
       setMenuHidden(!menuHidden);
     } else {
-      setMenuClass('');
       setMenuHidden(!menuHidden);
-      setCartClass('hide');
       setCartHidden(true);
     }
   };
 
   const toggleCart = () => {
     if (!cartHidden) {
-      setCartClass('hide');
       setCartHidden(!cartHidden);
     } else {
-      setCartClass('');
       setCartHidden(!cartHidden);
-      setMenuClass('hide');
       setMenuHidden(true);
     }
   };
@@ -53,6 +52,4 @@ const Layout = ({ children }) => {
       {children}
     </>
   );
-};
-
-export default Layout;
+}
