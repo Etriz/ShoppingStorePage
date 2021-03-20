@@ -2,7 +2,7 @@ import React, { useContext } from 'react';
 import storeContext from '../contexts/StoreContext';
 
 export default function Cart(props) {
-  const { cartContents, setCartContents } = useContext(storeContext);
+  const { cartContents, setCartContents, setCartHidden } = useContext(storeContext);
 
   const noItems = (
     <div className="cartItem">
@@ -33,20 +33,22 @@ export default function Cart(props) {
     });
     return (
       <div className="cartItem" style={{ border: 0 }}>
-        {/* <p>Your total is ${Number(total).toFixed(2)}</p> */}
         <p className="itemTitle">Total</p>
         <p className="itemText">${Number(total).toFixed(2)}</p>
+        <span className="spacer" />
       </div>
     );
   };
 
   return (
-    <div className={`cart ${props.className}`}>
-      <h1>Shopping Cart</h1>
-      <hr />
-      {cartContents.length === 0 ? noItems : displayCart}
-      {cartTotal()}
-      <button className="checkoutBtn">Checkout Now</button>
+    <div className={`cartBg ${props.className}`} onClick={() => setCartHidden(true)}>
+      <div className={`cart ${props.className}`} onClick={(e) => e.stopPropagation()}>
+        <h1>Shopping Cart</h1>
+        <hr />
+        {cartContents.length === 0 ? noItems : displayCart}
+        {cartTotal()}
+        <button className="checkoutBtn">Checkout Now</button>
+      </div>
     </div>
   );
 }

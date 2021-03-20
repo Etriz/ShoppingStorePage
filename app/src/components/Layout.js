@@ -6,7 +6,9 @@ import Menu from './Menu';
 import Cart from './Cart';
 
 export default function Layout({ children }) {
-  const { menuHidden, setMenuHidden, cartHidden, setCartHidden } = useContext(StoreContext);
+  const { menuHidden, setMenuHidden, cartHidden, setCartHidden, hideAll } = useContext(
+    StoreContext
+  );
 
   const [menuClass, setMenuClass] = useState('hide');
   const [cartClass, setCartClass] = useState('hide');
@@ -39,7 +41,7 @@ export default function Layout({ children }) {
       <nav>
         <div className="container">
           <span className="fas fa-bars fa-2x menuBtn" onClick={toggleMenu}></span>
-          <Link to="/" className="homeLink">
+          <Link to="/" className="homeLink" onClick={() => hideAll()}>
             <h1 className="logo">
               Home<span>Hideaway</span>
             </h1>

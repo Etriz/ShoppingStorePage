@@ -26,10 +26,10 @@ export default function ProductCard({ product }) {
       <h1>{productTitle}</h1>
       <div className="infoPanel">
         <div className="btnGrp">
-          <button className="viewBtn" onClick={viewProduct}>
+          <button className="viewBtn" onClick={() => viewProduct()}>
             View
           </button>
-          <button className="cartBtn" onClick={addToCart}>
+          <button className="cartBtn" onClick={() => addToCart()}>
             Add To Cart
           </button>
         </div>
